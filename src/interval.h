@@ -21,6 +21,13 @@ class interval {
         return (x < max) && (x > min);
     }
 
+    double clamp(double x) const {
+        // returns a clipped (clamped) value of x that is within [min,max].
+        if (x < min) { return min; }
+        if (x > max) { return max; }
+        return x;
+    }
+
     static const interval empty, universe;
 };
 
