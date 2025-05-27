@@ -66,7 +66,6 @@ class camera {
         center = lookfrom;
 
         // Viewport dimensions
-        auto focal_length = (lookfrom - lookat).length();
         auto theta = degrees_to_radians(vfov);
         auto h = std::tan(theta / 2.0);
         auto viewport_height = 2.0 * h * focus_dist;
